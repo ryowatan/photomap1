@@ -1,0 +1,72 @@
+/*疑問*/
+/*日本語フォントはメイリオ反映されてる？*/
+
+
+
+/*top-wrapperとconteinerを分けることで背景画像にシェイプを重ねることが可能*/
+.top-wrapper{
+    background-image: url("IMGP5736.JPG");
+    height: 680px;
+    width: 1200px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-bottom: 100px;
+}
+/*top-wrapperを親(relative)に設定し、子(conteiner)をabsoluteすることでシェイプの配置を中央にしている*/
+
+.conteiner{ text-align: center;
+    color: black;
+    margin: 200px 300px;
+    padding: 50px ;
+    background-color: rgb(250, 247, 235);
+    opacity: 0.5;
+    position: absolute;
+    top: 1px;
+    left: 100px;
+}
+
+.top-wrapper h1{
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-family: "Times New Roman","Great Vibes","Sorts Mill Goudy","Lato","inherit";
+}
+/*Times New Romanは設定可能。VScode→windowsなのでwindowsが適用可能ならフォントとして使用可能*/
+
+.top-wrapper p{
+    font-size: 20px;
+    font-family: "Times New Roman","メイリオ","meiryo UI","Arial";
+}
+.summary-wrapper{text-align: center;
+    font-family: "メイリオ","meiryo UI","Arial";
+    margin-bottom: 300px;
+    border-bottom: 1px groove black;
+    height: 300px;
+    width: 600px;
+    margin: 0 auto;
+
+    
+}
+
+/*日本地図に都道府県の選択肢を重ねていく*/
+
+
+.pic_map{
+    width: 550px;
+    margin-top: 280px;
+    margin-left: 50px;
+    position: relative;
+}
+.map_title{margin-bottom: 80px;}
+
+.select_prefecture{position: absolute;
+    top: 1230px;
+    left: 750px;
+    height: 550px;
+    display: inline-block;
+    height: 700px;
+    width: 400px;
+    font-size: small;
+
+}
+.map_title p{font-size: 20px;}

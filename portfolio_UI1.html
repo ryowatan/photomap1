@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_UI1.css">
+    <link rel="stylesheet" href="fukusima_page.html">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>    
+</head>
+<body>
+<header></header>
+<!--表紙は完成-->
+
+<div class="top-wrapper">
+    <div class="conteiner">
+        <h1>Photo Map</h1>
+        <p>記憶を記録に</p>
+    </div>
+    
+
+</div>
+
+<div class="summary-wrapper">
+    <h1>さぁ、写真を撮りにでかけよう‼</h1>
+    <p>photo mapとは</p>
+    <li>撮影した写真を地域ごとに分類して表示</li>
+    <li>行きたい地域の綺麗な写真を検索</li>
+    
+
+</div>
+
+<div class="margin"></div>
+
+<!--日本地図の地域選択パート-->
+<div class="japan_map">
+    <div class="map_title">
+        <p>＜行きたい地域を選択＞ </p>
+    </div>
+    <img src="map-japan.png" alt="日本地図" >
+    
+
+<!--画像の上に都道府県の選択肢を重ねる-->
+    <div class="select_prefecture">
+      
+        <div class="area">
+            <span class="area_btn area1" >北海道・東北</span>
+            <span class="area_btn area2">関東</span> 
+            <span class="area_btn area3">中部</span> 
+            <span class="area_btn area4">近畿</span> 
+            <span class="area_btn area5">中国・四国</span> 
+            <span class="area_btn area6">九州・沖縄</span> 
+        </div>
+
+        <div class="area_overlay"></div>
+
+
+
+
+
+
+
+
+        <div class="pref_area">
+            <!--大きさの指定はhtmlでしておく。背景のpref_areaに合わせて100%表示すればどの表であっても対応できる-->
+            <div class="pref_list"　data-list="1">
+                <table  border="2" width="100%"   cellpadding="10">
+                <tr align="center"　>
+                    <td width="50%">北海道</td>
+                    <td>青森</td>
+                </tr>
+                <tr align="center">
+                    <td>秋田</td>
+                    <td>岩手</td>
+                </tr>
+                <tr align="center">
+                    <td>福島</td> 
+                </tr>
+                
+            </table></div>
+           <div class="pref_list"　data-list="2">
+               <table border="2" width="100%"   cellpadding="10">
+             <tr align="center"　>
+                <td width="50%">茨城</td>
+                <td>群馬</td>
+                </tr>
+                <tr align="center">
+                <td>栃木</td>
+                <td>埼玉</td>
+                </tr>
+                <tr align="center">
+                <td>千葉</td> 
+                <td>東京</td> 
+                </tr>
+                <tr align="center">
+                <td>神奈川</td> 
+                </tr>
+                </table>
+            </div>
+           
+            <div class="pref_list"　data-list="4">
+                <table border="2" width="100%"   cellpadding="10">
+              <tr align="center"　>
+             <td width="50%">三重</td>
+                <td>滋賀</td>
+             </tr>
+             <tr align="center">
+                <td>京都</td>
+                <td>大阪</td>
+             </tr>
+             <tr align="center">
+                <td>兵庫</td> 
+                 <td>奈良</td> 
+             </tr>
+             <tr align="center">
+                <td>和歌山</td> 
+                <td>愛知</td> 
+             </tr>
+             </table>
+            </div>
+            <div class="pref_list"　data-list="5">
+                <table border="2" width="100%"   cellpadding="10">
+              <tr align="center"　>
+             <td width="50%">鳥取</td>
+                <td>島根</td>
+             </tr>
+             <tr align="center">
+                <td>岡山</td>
+                <td>広島</td>
+             </tr>
+             <tr align="center">
+                <td>山口</td> 
+                 <td>徳島</td> 
+             </tr>
+             <tr align="center">
+                <td>香川</td> 
+                <td>愛媛</td> 
+             </tr>
+             <tr align="center">
+                <td>高知</td> 
+             </tr>
+             </table>
+            </div>
+            <div class="pref_list"　data-list="6">
+                <table border="2" width="100%"   cellpadding="10">
+              <tr align="center"　>
+             <td width="50%">福岡</td>
+                <td>佐賀</td>
+             </tr>
+             <tr align="center">
+                <td>長崎</td>
+                <td>熊本</td>
+             </tr>
+             <tr align="center">
+                <td>大分</td> 
+                 <td>宮崎</td> 
+             </tr>
+             <tr align="center">
+                <td>鹿児島</td> 
+                <td>沖縄</td> 
+             </tr>
+             
+             </table>
+            </div>
+                
+        
+            <div class="pref_list"　data-list="3">
+               
+            </div>
+            
+            
+
+        </div>
+
+        
+       
+
+      
+
+
+    </div>
+
+
+
+</div>
+    
+
+
+
+<footer></footer>
+
+<script src="portfolio.js"></script>
+</body>
+</html>

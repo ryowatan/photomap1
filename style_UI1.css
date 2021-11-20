@@ -1,0 +1,168 @@
+/*疑問*/
+/*日本語フォントはメイリオ反映されてる？*/
+
+
+/*セレクタ・プロパティ・値の3要素で構成されている*/
+/*top-wrapperとconteinerを分けることで背景画像にシェイプを重ねることが可能*/
+.top-wrapper{
+    background-image: url("IMGP5736.JPG");
+    height: 680px;
+    width: 1200px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-bottom: 100px;
+}
+/*top-wrapperを親(relative)に設定し、子(conteiner)をabsoluteすることでシェイプの配置を中央にしている*/
+
+.conteiner{ text-align: center;
+    color: black;
+    margin: 200px 300px;
+    padding: 50px ;
+    background-color: rgb(250, 247, 235);
+    opacity: 0.5;
+    position: absolute;
+    top: 1px;
+    left: 100px;
+}
+
+.top-wrapper h1{
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-family: "Times New Roman","Great Vibes","Sorts Mill Goudy","Lato","inherit";
+}
+/*Times New Romanは設定可能。VScode→windowsなのでwindowsが適用可能ならフォントとして使用可能*/
+
+.top-wrapper p{
+    font-size: 20px;
+    font-family: "Times New Roman","メイリオ","meiryo UI","Arial";
+}
+.summary-wrapper{text-align: center;
+    font-family: "メイリオ","meiryo UI","Arial";
+    margin-bottom: 300px;
+    border-bottom: 1px groove black;
+    height: 300px;
+    width: 600px;
+    margin: 0 auto;
+
+    
+}
+
+.margin{
+   height: 200px; 
+}
+
+/*日本地図に都道府県の選択肢を重ねていく*/
+
+.japan_map{
+    width: 550px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: table;
+    background-color: #adf6ff;
+}
+
+.map_title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;}
+
+
+.map_title p{font-size: 20px;}
+
+.japan_map img{
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    
+}
+
+.japan_map .area_btn{
+    position: absolute;
+    /*z-indexでは表示内容を重ねる際に順番を指定できる。pppにおける最背面に移動と同じ*/
+    z-index: 1;
+    /*box-sizingではpaddingとmarginを縦横の大きさに含むかを決めている、レスポンシブデザインに対応するために%表示が使いやすくなる*/
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 3px solid #333333;
+    border-radius: 5px;
+    background-color: #FFF;
+    padding: 0.2em auto;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.japan_map .area_btn.area1{
+    top: 50%;
+    left: 49%;
+    width: 30%;
+}
+.japan_map .area_btn.area2{
+    top: 67%;
+    right: 32%;
+    width: 13%;
+}
+.japan_map .area_btn.area3{
+    top: 64%;
+    right: 45%;
+    width: 13%;
+}
+.japan_map .area_btn.area4{
+    top: 75%;
+    right: 53%;
+    width: 13%;
+}
+.japan_map .area_btn.area5{
+    top: 68%;
+    left: 14%;
+    width: 25%;
+}
+.japan_map .area_btn.area6{
+    top: 80%;
+    left: 10;
+    width: 25%;
+}
+
+/*area_overlayは都道府県の背面に透かして入れることで、選択がしやすくなっている。さらに、背面のクラスと同じ大きさにすることで地方の選択に戻る効果もある*/
+.japan_map .area_overlay{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-color: #111;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.pref_area{display: none;}
+
+
+
+.pref_area{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    /*transformで表示内容のX軸方向とY軸方向への移動・回転・傾斜をつけることができる*/
+    /*transformのセレクタは二つ並んだときは、末行のほうが優先される*/
+    transform: translateY(-50%) translateX(-50%);
+    /*ベンダープレフィックスといってブラウザごとにtransformのコードを有効にするために、transform前につけるもの*/
+    /*chromとsafarはwebkit、firefoxはmoz等*/
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    z-index: 3;
+    box-sizing: border-box;
+    width: 70%;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
